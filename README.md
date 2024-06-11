@@ -2,6 +2,15 @@ Hey!
 
 
 This Is a simple "Caesar Cipher" used by Julius Caesar to send messages to his allies in Roman Times.
+INSTRUCTIONS:
+1. Extract the zip file
+2. You will see only one file, cipher.zip
+3. At the top find the path and delete it
+4. Simply Write "CMD" and enter
+5. Make Sure you have any Version of Python 3 installed
+6. Run the Command "python cipher.py" hit enter, and youre good to go!
+7. Alternate options include running the file in an external IDE or text editor directly like Spyder, Visual Studio Code, Pycharmm etc.
+
 
 
 To encrypt, simply write any text you like, same for decrypt.
