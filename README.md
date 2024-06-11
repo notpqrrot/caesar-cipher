@@ -3,7 +3,7 @@ Hey!
 
 This Is a simple "Caesar Cipher" used by Julius Caesar to send messages to his allies in Roman Times.
 INSTRUCTIONS:
-1. Extract the zip file(Right Click ----> extract all)
+1. Download the latest release/bufix, and extract the zip file (Will be somethnig like CC-ver-1.x.x)
 2. You will see only one file, cipher.zip
 3. At the top find the path and delete it
 4. Simply Write "CMD" and enter
