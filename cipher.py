@@ -1,6 +1,6 @@
 import time
 import random
-
+import os
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 def encrypt():
     newstr = ''
@@ -58,6 +58,18 @@ def decrypt():
                     if idx3<0:
                         idx3+=26
                     brute+=alpha[idx3]
+            if word in brute:
+                os.system('cls||clear')
+                print("Message Possibly Cracked: " + brute)
+                ans2 = input("Would you like to continue?: ")
+                if ans2 == 'no':
+                    print('Message Cracked: ' + brute)
+                    print("Thank you for using Caesar Cipher Version 1.0!")
+                    exit()
+                else:
+                    continue
+                    
+                    
             print("Completed. Finished string is: " + brute)
             time.sleep(0.5)
             
