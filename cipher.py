@@ -9,8 +9,9 @@ def encrypt():
     string = input("Please enter your string to encrypt: ")
     print('Encrypting...')
     for char in string:
-        if char == ' ':
-            newstr+=' '
+        if char not in alpha:
+            newstr+=char
+                    
         else:
             
             idx = alpha.index(char)
@@ -31,8 +32,9 @@ def decrypt():
         print("Decrypting...")
         decstring = ''
         for char in dec:
-            if char == ' ':
-                decstring+=' '
+            if char not in alpha:
+                
+                decstring+=char
             else:
                 idx2 = alpha.index(char)
                 idx2-=key
@@ -48,8 +50,8 @@ def decrypt():
             print("Trying test case number " + str(key2))
             brute = ''
             for char in dec:
-                if char == ' ':
-                    brute+=' '
+                if char not in alpha:
+                    brute+=char
                 else:
                     idx3 = alpha.index(char)
                     idx3-=key2
