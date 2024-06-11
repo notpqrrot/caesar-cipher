@@ -1,8 +1,9 @@
 import time
 import random
 import os
-import PyEnchant as pe
-d = pe.Dict("en_US")
+from PyDictionary import PyDictionary
+dictionary=PyDictionary()
+
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 def encrypt():
     newstr = ''
@@ -61,7 +62,8 @@ def decrypt():
                         idx3+=26
                     brute+=alpha[idx3]
             for i in brute:
-                if d.check(i) == True:
+                if bool(dictionary.meaning(i)) == True:
+                    
                     
                     os.system('cls||clear')
                     print("Message Possibly Cracked: " + brute)
