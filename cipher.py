@@ -1,8 +1,8 @@
 import time
 import random
 import os
-import enchant
-d = enchant.Dict("en_US")
+import PyEnchant as pe
+d = pe.Dict("en_US")
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 def encrypt():
     newstr = ''
