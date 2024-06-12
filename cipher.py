@@ -2,7 +2,6 @@ import time
 import random
 import os
 import nltk
-count = 0
 nltk.download('words')
 ev = set(w.lower() for w in nltk.corpus.words.words())
 
@@ -65,22 +64,31 @@ def decrypt():
                         idx3+=26
                     brute+=alpha[idx3]
             rah = brute.split()
-            wordaa = 0
-            for i in rah:
-                if i in ev:
-                    wordaa+=1
-            if len(rah)//4 <=wordaa:
-                os.system('cls||clear')
-                print("Message Possibly Cracked: " + brute)
-                ans2 = input("Would you like to continue?: ")
-                if ans2 == 'no':
-                    print('Message Cracked: ' + brute)
-                    print("Thank you for using Caesar Cipher Version 1.0!")
-                    exit()
-                elif ans == 'yes':
+            
+            if len(rah) == 1:
+                if rah[0] in ev:
+                    os.system('cls||clear')
+                    print("Message Possibly Cracked: " + brute)
+                    ans2 = input("Would you like to continue?: ")
+                    if ans2 == 'no':
+                        print('Message Cracked: ' + brute)
+                        print("Thank you for using Caesar Cipher Version 1.0!")
+                        exit()
+                    elif ans == 'yes':
 
-                    pass
+                        pass
+            else:
+                if rah[0] in ev and rah[1] in ev:
+                    os.system('cls||clear')
+                    print("Message Possibly Cracked: " + brute)
+                    ans2 = input("Would you like to continue?: ")
+                    if ans2 == 'no':
+                        print('Message Cracked: ' + brute)
+                        print("Thank you for using Caesar Cipher Version 1.0!")
+                        exit()
+                    elif ans == 'yes':
 
+                        pass
 
 
 
