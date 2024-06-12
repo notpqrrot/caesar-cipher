@@ -11,7 +11,7 @@ alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', '
 def encrypt():
     newstr = ''
     shift = random.randint(0,25)
-    print("Your key is: " + shift)
+    print(shift)
     string = input("Please enter your string to encrypt: ")
     print('Encrypting...')
     for char in string:
@@ -65,10 +65,11 @@ def decrypt():
                         idx3+=26
                     brute+=alpha[idx3]
             rah = brute.split()
+            wordaa = 0
             for i in rah:
                 if i in ev:
-                    count+=1
-            if len(rah)//4 <=count:
+                    wordaa+=1
+            if len(rah)//4 <=wordaa:
                 os.system('cls||clear')
                 print("Message Possibly Cracked: " + brute)
                 ans2 = input("Would you like to continue?: ")
