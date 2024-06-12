@@ -11,7 +11,7 @@ alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', '
 def encrypt():
     newstr = ''
     shift = random.randint(0,25)
-    print(shift)
+    print("Your key is: " + shift)
     string = input("Please enter your string to encrypt: ")
     print('Encrypting...')
     for char in string:
