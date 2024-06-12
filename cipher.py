@@ -78,7 +78,7 @@ def decrypt():
 
                         pass
             else:
-                if rah[0] in ev and rah[1] in ev:
+                if (rah[0] in ev and rah[1] in ev) or (rah[2] and rah[3] in ev):
                     os.system('cls||clear')
                     print("Message Possibly Cracked: " + brute)
                     ans2 = input("Would you like to continue?: ")
