@@ -8,11 +8,11 @@ INSTRUCTIONS(MAC-OS/Linux(Linux is still a question..):
 3. At the top find the path and delete it
 4. Simply Write "CMD" and enter
 5. Make Sure you have any Version of Python 3 installed
-6. Before running the file, ensure that you have installed the "PyEnchant" libary (pip install pyenchant)
-7. Run the Command "python cipher.py" hit enter, and youre good to go!
-8. Alternate options include running the file in an external IDE or text editor directly like Spyder, Visual Studio Code, Pycharmm etc.
-Windows Users:
-Install the windows version of the file, which currently uses a very "lazy" brute force method that you have to sift through to find the sentence you like for no key searching. (As soon as Pyenchant releases their Windows update, i will merge both scripts)
+6. Before running the file, ensure that you have installed the "Nltk library" https://www.nltk.org/install.html and its data (See Installing Nltk Data)
+7. MAKE SURE THAT YOU HAVE python 3.6-3.10 installed, otherwsie download "no-nltk.zip" and follow directions normally from here
+8. Run the Command "python cipher.py" hit enter, and youre good to go!
+9. Alternate options include running the file in an external IDE or text editor directly like Spyder, Visual Studio Code, Pycharmm etc.
+
 
 To encrypt, simply write any text you like, same for decrypt.
 
