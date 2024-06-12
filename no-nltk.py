@@ -11,7 +11,7 @@ def encrypt():
     newstr = ''
     shift = random.randint(0,25)
     print("Your key is: " + str(shift))
-    string = input("Please enter your string to encrypt: ")
+    string = input("Please enter your string to encrypt(lowercase only): ")
     print('Encrypting...')
     for char in string:
         if char not in alpha:
