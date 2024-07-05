@@ -30,6 +30,7 @@ def encrypt():
     print("Thank you for using Caesar Cipher (CC) Version 1.0!")
 
 def decrypt():
+    word_count = 0
     dec = input("Enter the string you would like to Decrypt: ")
     keyornah = input("Do you have a key? ")
     if keyornah == 'yes':
@@ -78,7 +79,16 @@ def decrypt():
 
                         pass
             else:
-                if (rah[0] in ev and rah[1] in ev) or (rah[2] and rah[3] in ev):
+                for word in rah:
+
+                    if word in ev:
+                        word_count+=1
+
+
+
+		          
+
+                if word_count >= len(rah)//3:
                     os.system('cls||clear')
                     print("Message Possibly Cracked: " + brute)
                     ans2 = input("Would you like to continue?: ")
@@ -110,3 +120,4 @@ elif ans == 'd':
     
     
                    
+
