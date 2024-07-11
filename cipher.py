@@ -5,11 +5,10 @@ import nltk
 nltk.download('words')
 ev = set(w.lower() for w in nltk.corpus.words.words())
 
-
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 def encrypt():
     newstr = ''
-    shift = random.randint(0,25)
+    shift = random.randint(1,25)
     print(shift)
     string = input("Please enter your string to encrypt(lowercase only): ")
     print('Encrypting...')
@@ -31,6 +30,7 @@ def encrypt():
 
 def decrypt():
     word_count = 0
+    check = []
     dec = input("Enter the string you would like to Decrypt: ")
     keyornah = input("Do you have a key? ")
     if keyornah == 'yes':
@@ -54,6 +54,7 @@ def decrypt():
         
         for key2 in range(25):
             print("Trying test case number " + str(key2))
+
             brute = ''
             for char in dec:
                 if char not in alpha:
@@ -70,44 +71,40 @@ def decrypt():
                 if rah[0] in ev:
                     os.system('cls||clear')
                     print("Message Possibly Cracked: " + brute)
+                    
                     ans2 = input("Would you like to continue?: ")
                     if ans2 == 'no':
                         print('Message Cracked: ' + brute)
                         print("Thank you for using Caesar Cipher Version 1.0!")
                         exit()
-                    elif ans == 'yes':
-
-                        pass
+                    
             else:
-                for word in rah:
 
-                    if word in ev:
-                        word_count+=1
-
+                    
+                word_count = sum(1 for word in rah if word.lower() in ev)
 
 
-		          
+                if word_count >= len(rah)//2:
 
-                if word_count >= len(rah)//3:
+
+
+
+
+
                     os.system('cls||clear')
                     print("Message Possibly Cracked: " + brute)
+                    
                     ans2 = input("Would you like to continue?: ")
                     if ans2 == 'no':
                         print('Message Cracked: ' + brute)
                         print("Thank you for using Caesar Cipher Version 1.0!")
                         exit()
-                    elif ans == 'yes':
-
-                        pass
-
-
-
                 
+                    
+            
             print("Completed. Finished string is: " + brute)
             time.sleep(0.5)
-            
-            brute = ''
-            
+
         print("Thank you for using Caesar Cipher Version 1.0!")
         exit()
                        
@@ -120,4 +117,3 @@ elif ans == 'd':
     
     
                    
-
